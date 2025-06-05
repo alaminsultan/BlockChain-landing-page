@@ -1,0 +1,710 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary-color: #3a86ff;
+  --secondary-color: #8338ec;
+  --dark-color: #1a1a2e;
+  --light-color: #f8f9fa;
+  --text-color: #333;
+  --text-light: #6c757d;
+  --success-color: #4caf50;
+  --border-color: #e0e0e0;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* Section 1: Navbar */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links ul li {
+  margin: 0 15px;
+}
+
+.nav-links ul li a {
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: var(--primary-color);
+}
+
+.fa-bars,
+.fa-times {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Section 2: Banner */
+.banner {
+  background-color: #f9fafb;
+  padding: 80px 0;
+}
+
+.banner .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.banner-content {
+  flex: 1;
+}
+
+.banner-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+.banner-content p {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+.banner-image {
+  flex: 1;
+  text-align: center;
+}
+.banner-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+/* Section 3: Our Clients */
+.clients {
+  text-align: center;
+  background-color: white;
+}
+
+.clients h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.clients p {
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.logo-item {
+  flex: 0 0 calc(16.666% - 30px);
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo-item:hover {
+  filter: grayscale(0%);
+}
+
+.logo-item img {
+  max-width: 70px;
+  height: auto;
+  display: block;
+}
+
+/* Section 4: Power of Blockchain */
+.power-blockchain {
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.power-blockchain h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.power-blockchain > p {
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.power-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.power-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.power-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  margin-bottom: 20px;
+}
+
+.card-icon img {
+  width: 75px;
+  height: 60px;
+  border-radius: 10% 30% 10% 30%;
+  background-color: rgba(11, 104, 255, 0.459);
+  padding: 5px 5px 0 0px;
+}
+
+.power-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.power-card p {
+  color: var(--text-light);
+}
+
+/* Section 5: Helping Blockchain */
+.helping-blockchain {
+  background-color: white;
+}
+
+.helping-blockchain .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.helping-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.helping-content p {
+  color: var(--text-light);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.stat-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+  background-color: rgba(58, 134, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-info h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.stat-info p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Section 6: Blockchain Future */
+.blockchain-future {
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.blockchain-future h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.blockchain-future p {
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.future-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.future-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  height: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  margin: 0 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.future-card:hover .card-overlay {
+  background-color: rgba(58, 134, 255, 0.9);
+}
+
+.future-card:hover .card-overlay h3,
+.future-card:hover .card-overlay .read-more {
+  color: white;
+}
+
+.card-overlay h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.read-more {
+  color: var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.read-more i {
+  font-size: 14px;
+}
+
+/* Section 7: Contact Us */
+.contact-us {
+  background-color: white;
+}
+
+.contact-us .container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.contact-image {
+  flex: 1;
+  text-align: start;
+}
+.contact-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  flex: 1;
+}
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Section 8: Footer */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-logo p {
+  color: #b3b3b3;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+}
+
+.footer-links {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.link-column {
+  flex: 1;
+  min-width: 160px;
+}
+
+.link-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.link-column ul {
+  list-style: none;
+}
+
+.link-column ul li {
+  margin-bottom: 10px;
+}
+
+.link-column ul li a {
+  color: #b3b3b3;
+  transition: color 0.3s ease;
+}
+
+.link-column ul li a:hover {
+  color: white;
+}
+
+.newsletter {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+}
+
+.newsletter button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #2563eb;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+#closeMenu,
+#openMenu {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .banner .container,
+  .contact-us .container {
+    flex-direction: column-reverse;
+  }
+
+  .banner-content,
+  .banner-image,
+  .contact-image,
+  .contact-form {
+    flex: none;
+    width: 100%;
+  }
+
+  .banner-content {
+    text-align: center;
+  }
+
+  .power-card,
+  .future-card {
+    min-width: calc(50% - 30px);
+  }
+  #closeMenu,
+  #openMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    position: relative;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1001;
+    padding: 50px 20px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links ul li {
+    margin: 15px 0;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  .fa-times {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .logo-item {
+    flex: 0 0 calc(50% - 30px);
+  }
+
+  .power-card,
+  .future-card {
+    min-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+  #closeMenu,
+  #openMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-content h1 {
+    font-size: 32px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .power-blockchain h2,
+  .helping-content h2,
+  .blockchain-future h2,
+  .contact-form h2 {
+    font-size: 28px;
+  }
+
+  .stat-card {
+    min-width: 100%;
+  }
+  #closeMenu,
+  #openMenu {
+    display: block;
+  }
+}
