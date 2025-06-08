@@ -619,6 +619,17 @@ footer {
   #openMenu {
     display: block;
   }
+  #closeMenu,
+  #openMenu {
+    display: none;
+  }
+  .helping-blockchain .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .helping-content {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
